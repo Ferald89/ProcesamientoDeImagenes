@@ -5,7 +5,7 @@ close all; %Cerramos todas las pantallas
 %% Obtencion de la imagen
 I=getImgCam(2);%Tomamos la captura de la camra
 IBW=GetBW(I);%binarizado de pieza
-%% Se Procede a la obtención de valores
+%% Se Procede a la obtenciï¿½n de valores
 s = regionprops(IBW,'centroid','Orientation');%aqui logramos sacar el centroide de la figura y la orientaciÃ³n
 centroids = cat(1, s.Centroid);
 figure;
@@ -14,7 +14,7 @@ Angulo=s.Orientation
 hold on
 plot(centroids(:,1),centroids(:,2), 'b*')
 hold off
-%% Con el angulo podemos tomar una decisión
+%% Con el angulo podemos tomar una decisiï¿½n
 if (Angulo>85 && Angulo<95) || (Angulo>-95 && Angulo<-85)
  fprintf('Entro A 90 grados')
  elseif(Angulo>-10 && Angulo<10 )
